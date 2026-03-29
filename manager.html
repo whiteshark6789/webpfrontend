@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Inventory Management</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="logo">ASA Pharma – Manager</div>
+    <nav class="nav-actions">
+      <a href="inbox.html" class="nav-btn">Inbox</a>
+      <a href="#" onclick="localStorage.clear(); window.location.href='index.html';" class="nav-btn"
+        style="background: #e53935; color: white;">Logout</a>
+    </nav>
+  </header>
+
+  <main class="inventory-container">
+
+    <!-- LEFT: FORM -->
+    <section class="inventory-form">
+      <h2>Manage Product</h2>
+
+      <!-- ONLY ONE hidden productId -->
+      <input type="hidden" id="productId">
+
+      <label>Name</label>
+      <input type="text" id="name" />
+
+      <label>Price</label>
+      <input type="number" id="price" />
+
+      <label>Stock</label>
+      <input type="number" id="stock" />
+
+      <label>Category</label>
+      <input type="text" id="category" />
+
+      <label>Image URL</label>
+      <input type="text" id="image" />
+
+      <div class="form-actions">
+        <button type="button" onclick="saveProduct()" class="btn primary">
+          Save
+        </button>
+
+        <button type="button" onclick="clearForm()" class="btn danger">
+          Clear
+        </button>
+      </div>
+    </section>
+
+    <!-- RIGHT: TABLE -->
+    <section class="inventory-table">
+      <h2>Inventory</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="productTable"></tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="js/manager.js"></script>
+</body>
+
+</html>

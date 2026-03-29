@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up – ASA Pharma</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="topbar">
+    <div class="logo">ASA Pharma</div>
+    <nav class="nav-actions">
+      <a href="login.html" class="btn secondary" style="padding: 8px 16px; text-decoration: none;">Login</a>
+    </nav>
+  </header>
+
+  <!-- Signup Container -->
+  <main class="auth-container">
+    <div class="auth-card">
+      <h2>Create Account</h2>
+      <p>Join ASA Pharma</p>
+
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Password" required />
+
+        <select required>
+          <option value="">Select Role</option>
+          <option value="customer">Customer</option>
+          <option value="manager">Manager</option>
+        </select>
+
+        <button type="submit" class="btn primary">Sign Up</button>
+      </form>
+
+      <div class="auth-footer" style="margin-top: 25px;">
+        <p style="color: #666; margin-bottom: 15px;">Already have an account?</p>
+        <a href="login.html" class="btn secondary"
+          style="padding: 10px 20px; display: inline-block; border-radius: 6px; text-decoration: none;">Login to your
+          Account</a>
+      </div>
+    </div>
+  </main>
+  <script src="js/signup.js"></script>
+
+</body>
+
+</html>

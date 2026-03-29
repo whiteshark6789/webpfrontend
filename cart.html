@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="logo">ASA Pharma</div>
+    <nav class="nav-actions">
+      <a href="shopping.html" class="nav-btn">Back to Shop</a>
+      <a href="profile.html" class="nav-btn">Profile</a>
+      <a href="#" onclick="localStorage.clear(); window.location.href='index.html';" class="nav-btn"
+        style="background: #e53935; color: white;">Logout</a>
+    </nav>
+  </header>
+
+  <main class="cart-container">
+    <h2>Cart</h2>
+
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="cartItems">
+        <!-- items injected via js -->
+      </tbody>
+    </table>
+
+    <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 20px 0;" />
+
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+      <!-- Left side: Back to Shop -->
+      <a href="shopping.html"
+        style="color: #0288d1; text-decoration: none; font-weight: 600; font-size: 16px; margin-bottom: 8px;">
+        &larr; Back to Shop
+      </a>
+
+      <!-- Right side: Totals -->
+      <div style="width: 300px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+          <span style="color: #666; font-size: 15px;">Subtotal</span>
+          <span id="subTotal" style="font-weight: 600; color: #222;">₹0</span>
+        </div>
+        <div
+          style="display: flex; justify-content: space-between; margin-bottom: 12px; border-bottom: 1px solid #eee; padding-bottom: 12px;">
+          <span style="color: #666; font-size: 15px;">Shipping</span>
+          <span class="free" style="font-weight: 600;">Free</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 18px;">
+          <span style="font-size: 18px; color: #222;">Total</span>
+          <span id="grandTotal" style="margin-top: 0;">₹0</span>
+        </div>
+        <button class="btn primary" onclick="placeOrder()"
+          style="width: 100%; margin-top: 24px; padding: 14px; border-radius: 8px; font-size: 16px;">Check out</button>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="js/cart.js"></script>
+</body>
+
+</html>

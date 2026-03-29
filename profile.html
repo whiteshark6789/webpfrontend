@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Profile – ASA Pharma</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="topbar">
+  <div class="logo">ASA Pharma</div>
+  <nav class="nav-actions">
+    <a href="shopping.html" class="nav-btn">Shop</a>
+    <a href="cart.html" class="nav-btn">Cart</a>
+  </nav>
+</header>
+
+<main class="profile-container">
+
+  <!-- Profile Card -->
+  <section class="profile-card">
+    <h2>My Profile</h2>
+
+    <div class="profile-row">
+      <span>Name</span>
+      <strong id="profileName">John Doe</strong>
+    </div>
+
+    <div class="profile-row">
+      <span>Email</span>
+      <strong id="profileEmail">john@example.com</strong>
+    </div>
+
+    <div class="profile-row">
+      <span>Phone</span>
+      <strong id="profilePhone">+91 9876543210</strong>
+    </div>
+
+    <div class="profile-row">
+      <span>Role</span>
+      <strong id="profileRole">Customer</strong>
+    </div>
+
+    <button class="btn primary" onclick="editProfile()">
+      Edit Profile
+    </button>
+  </section>
+
+</main>
+
+<script src="js/profile.js"></script>
+</body>
+</html>

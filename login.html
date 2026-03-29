@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – ASA Pharma</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="topbar">
+    <div class="logo">ASA Pharma</div>
+    <nav class="nav-actions">
+      <a href="signup.html" class="btn secondary" style="padding: 8px 16px; text-decoration: none;">Sign Up</a>
+    </nav>
+  </header>
+
+  <!-- Login Section -->
+  <main class="auth-container">
+    <div class="auth-card">
+      <h2>Welcome Back</h2>
+      <p>Login to continue</p>
+
+      <form id="loginForm">
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Password" required />
+
+        <select required>
+          <option value="">Login As</option>
+          <option value="customer">Customer</option>
+          <option value="manager">Manager</option>
+        </select>
+
+        <button type="submit" class="btn primary">Login</button>
+      </form>
+
+      <div class="auth-footer" style="margin-top: 25px;">
+        <p style="color: #666; margin-bottom: 15px;">Don’t have an account?</p>
+        <a href="signup.html" class="btn secondary"
+          style="padding: 10px 20px; display: inline-block; border-radius: 6px; text-decoration: none;">Create an
+          Account</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/login.js"></script>
+</body>
+
+</html>
