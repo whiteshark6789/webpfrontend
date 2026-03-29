@@ -19,32 +19,67 @@
 <main class="profile-container">
 
   <!-- Profile Card -->
-  <section class="profile-card">
+  <section class="profile-card" id="profileView">
     <h2>My Profile</h2>
 
     <div class="profile-row">
       <span>Name</span>
-      <strong id="profileName">John Doe</strong>
+      <strong id="profileName">Loading...</strong>
     </div>
 
     <div class="profile-row">
       <span>Email</span>
-      <strong id="profileEmail">john@example.com</strong>
+      <strong id="profileEmail">Loading...</strong>
     </div>
 
     <div class="profile-row">
       <span>Phone</span>
-      <strong id="profilePhone">+91 9876543210</strong>
+      <strong id="profilePhone">Loading...</strong>
+    </div>
+
+    <div class="profile-row">
+      <span>Address</span>
+      <strong id="profileAddress">Loading...</strong>
     </div>
 
     <div class="profile-row">
       <span>Role</span>
-      <strong id="profileRole">Customer</strong>
+      <strong id="profileRole">Loading...</strong>
     </div>
 
-    <button class="btn primary" onclick="editProfile()">
+    <button class="btn primary" onclick="toggleEdit(true)">
       Edit Profile
     </button>
+  </section>
+
+  <!-- Edit Profile Card (Hidden by default) -->
+  <section class="profile-card" id="profileEdit" style="display: none;">
+    <h2>Edit Profile</h2>
+
+    <div class="profile-row">
+      <span>Name</span>
+      <input type="text" id="editName" class="profile-input" />
+    </div>
+
+    <div class="profile-row">
+      <span>Email</span>
+      <input type="email" id="editEmail" class="profile-input" />
+    </div>
+
+    <div class="profile-row">
+      <span>Phone</span>
+      <input type="text" id="editPhone" class="profile-input" />
+    </div>
+
+    <div class="profile-row">
+      <span>Address</span>
+      <input type="text" id="editAddress" class="profile-input" />
+    </div>
+
+    <div style="display: flex; gap: 10px; margin-top: 20px;">
+      <button class="btn primary" onclick="saveProfile()" style="flex: 1;">Save Changes</button>
+      <button class="btn" onclick="toggleEdit(false)" style="flex: 1; background: #eee; color: #333;">Cancel</button>
+    </div>
   </section>
 
 </main>
