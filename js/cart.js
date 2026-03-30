@@ -7,7 +7,7 @@ const grandTotalEl = document.getElementById("grandTotal");
 
 let currentCart = null;
 
-fetch(`http://localhost:5000/api/cart/${userId}`)
+fetch(`${API_URL}/api/cart/${userId}`)
   .then(res => res.json())
   .then(cart => {
     currentCart = cart;
@@ -44,7 +44,7 @@ fetch(`http://localhost:5000/api/cart/${userId}`)
   });
 
 function updateQty(productId, qty) {
-  fetch(`http://localhost:5000/api/cart/update/${userId}`, {
+  fetch(`${API_URL}/api/cart/update/${userId}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ productId, qty })
@@ -65,7 +65,7 @@ function placeOrder() {
     totalAmount: currentCart.total
   };
 
-  fetch(`http://localhost:5000/api/orders`, {
+  fetch(`${API_URL}/api/orders`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(orderData)

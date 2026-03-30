@@ -19,7 +19,7 @@ let allProducts = [];
 let currentHash = "";
 
 function fetchProducts() {
-  fetch("http://localhost:5000/api/products")
+  fetch(`${API_URL}/api/products`)
     .then(res => res.json())
     .then(data => {
       const newHash = JSON.stringify(data);
@@ -90,7 +90,7 @@ function renderProducts(products) {
 function addToCart(productId, name, price) {
   const userId = localStorage.getItem("userId");
 
-  fetch("http://localhost:5000/api/cart/add", {
+  fetch(`${API_URL}/api/cart/add`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({

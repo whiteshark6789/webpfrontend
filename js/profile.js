@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function loadProfile(userId) {
   try {
-    const res = await fetch(`http://localhost:5000/api/auth/profile/${userId}`);
+    const res = await fetch(`${API_URL}/api/auth/profile/${userId}`);
     const user = await res.json();
 
     if (user.error) throw new Error(user.error);
@@ -51,7 +51,7 @@ async function saveProfile() {
   };
 
   try {
-    const res = await fetch(`http://localhost:5000/api/auth/profile/${userId}`, {
+    const res = await fetch(`${API_URL}/api/auth/profile/${userId}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedData)

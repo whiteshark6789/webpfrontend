@@ -5,7 +5,7 @@ const stockInput = document.getElementById("stock");
 const categoryInput = document.getElementById("category");
 const imageInput = document.getElementById("image");
 const productIdInput = document.getElementById("productId");
-const API = "http://localhost:5000/api/products";
+const API = `${API_URL}/api/products`;
 // Auth guard
 const userId = localStorage.getItem("userId");
 const role = localStorage.getItem("role");
